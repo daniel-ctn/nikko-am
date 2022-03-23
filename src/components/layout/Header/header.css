@@ -1,0 +1,44 @@
+.header-container {
+    display: flex;
+    align-items: center;
+    padding: 1rem 5vw;
+}
+
+.header-brand {
+    flex-basis: 25%;
+    font-size: 1.4rem;
+    color: var(--teal--);
+    letter-spacing: 0.04rem;
+}
+
+.header-brand span {
+    color: var(--yellow--);
+}
+
+.header-nav {
+    flex-basis: 65%;
+}
+
+.header-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-nav li {
+    margin: 0 0.9rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.header-nav li:hover {
+    color: var(--teal--);
+}
+
+.header-search {
+    flex-basis: 10%;
+    display: flex;
+    place-content: center;
+}

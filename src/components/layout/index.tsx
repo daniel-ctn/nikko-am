@@ -3,10 +3,10 @@ import Header from './Header'
 
 const Layout: FC = ({ children }): ReactElement => {
   return (
-    <div>
+    <>
       <Header />
       {children}
-    </div>
+    </>
   )
 }
 
