@@ -19,11 +19,13 @@ const FeatureSectionComponent: FC = () => {
   const [data, setData] = useState<DataType[]>([])
   const [currentFeature, setCurrentFeature] = useState<DataType>({} as DataType)
   const [currentIndex, setCurrentIndex] = useState<number>(0)
+  const [currentImage, setCurrentImage] = useState<string>('')
 
   // set mock data
   useEffect(() => {
     setData(MOCK_DATA.data)
     setCurrentFeature(MOCK_DATA.data[0])
+    setCurrentImage(MOCK_DATA.data[0].imageUrl)
   }, [])
 
   // animate
@@ -44,6 +46,7 @@ const FeatureSectionComponent: FC = () => {
     (index: number) => {
       setCurrentFeature(data[index])
       setCurrentIndex(index)
+      setCurrentImage(data[index].imageUrl)
     },
     [data]
   )
@@ -67,7 +70,7 @@ const FeatureSectionComponent: FC = () => {
         <h1>Our Featured Funds</h1>
         <h3>Nikko AM ARM Disruptive Innovation Fund</h3>
         <img
-          src={currentFeature?.imageUrl}
+          src={currentImage}
           alt='shape feature'
           className='featureImg'
         />

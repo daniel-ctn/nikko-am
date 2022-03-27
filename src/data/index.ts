@@ -1,7 +1,7 @@
-import feature01 from 'images/feature01.svg'
-import feature02 from 'images/feature02.svg'
-import feature03 from 'images/feature03.svg'
-import feature04 from 'images/feature04.svg'
+import feature01 from 'assests/feature01.svg'
+import feature02 from 'assests/feature02.svg'
+import feature03 from 'assests/feature03.svg'
+import feature04 from 'assests/feature04.svg'
 
 export default {
   "data": [

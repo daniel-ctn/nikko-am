@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import AnchorTag from 'components/ui/AnchorTag'
 
-import shapeImage from 'images/section1_shape.svg'
+import shapeImage from 'assests/section1_shape.svg'
 import './topSection.css'
 
 const TopSectionComponent: FC = () => {

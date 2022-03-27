@@ -2,7 +2,7 @@ import { FC } from 'react'
 
 import AnchorTag from 'components/ui/AnchorTag'
 
-import shapeImage from 'images/section2_shape.svg'
+import shapeImage from 'assests/section2_shape.svg'
 import './midSection.css'
 
 const MidSectionComponent: FC = () => {
