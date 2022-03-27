@@ -3,7 +3,7 @@ import gsap from 'gsap'
 
 import AnchorTag from 'components/ui/AnchorTag'
 
-import MOCK_DATA from 'data/index.json'
+import MOCK_DATA from 'data'
 import './featureSection.css'
 
 interface DataType {

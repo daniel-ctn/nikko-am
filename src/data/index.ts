@@ -1,4 +1,9 @@
-{
+import feature01 from 'images/feature01.svg'
+import feature02 from 'images/feature02.svg'
+import feature03 from 'images/feature03.svg'
+import feature04 from 'images/feature04.svg'
+
+export default {
   "data": [
     {
       "id": "01",
@@ -6,7 +11,7 @@
       "assests": "7,309,193 million",
       "dayChange": "-1,094",
       "issued": "3,710,686,634 shares",
-      "imageUrl": "/src/images/feature01.svg"
+      "imageUrl": feature01
     },
     {
       "id":  "02",
@@ -14,7 +19,7 @@
       "assests": "8,329,193 million",
       "dayChange": "-2,924",
       "issued": "6,710,686,634 shares",
-      "imageUrl":  "/src/images/feature02.svg"
+      "imageUrl":  feature02
     },
     {
       "id":  "03",
@@ -22,7 +27,7 @@
       "assests": "7,209,193 million",
       "dayChange": "-2,095",
       "issued": "3,710,762,634 shares",
-      "imageUrl":  "/src/images/feature03.svg"
+      "imageUrl":  feature03
     },
     {
       "id":  "04",
@@ -30,7 +35,7 @@
       "assests": "5,309,193 million",
       "dayChange": "-1,814",
       "issued": "4,010,686,634 shares",
-      "imageUrl":  "/src/images/feature04.svg"
+      "imageUrl":  feature04
     }
   ]
 }
