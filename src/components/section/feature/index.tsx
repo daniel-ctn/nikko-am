@@ -4,6 +4,10 @@ import gsap from 'gsap'
 import AnchorTag from 'components/ui/AnchorTag'
 
 import MOCK_DATA from 'data'
+import feature01 from 'assests/feature01.svg'
+import feature02 from 'assests/feature02.svg'
+import feature03 from 'assests/feature03.svg'
+import feature04 from 'assests/feature04.svg'
 import './featureSection.css'
 
 interface DataType {
@@ -12,7 +16,6 @@ interface DataType {
   assests: string
   dayChange: string
   issued: string
-  imageUrl: string
 }
 
 const FeatureSectionComponent: FC = () => {
@@ -25,7 +28,7 @@ const FeatureSectionComponent: FC = () => {
   useEffect(() => {
     setData(MOCK_DATA.data)
     setCurrentFeature(MOCK_DATA.data[0])
-    setCurrentImage(MOCK_DATA.data[0].imageUrl)
+    setCurrentImage(getImgUrl(0))
   }, [])
 
   // animate
@@ -42,13 +45,28 @@ const FeatureSectionComponent: FC = () => {
     )
   }, [currentFeature])
 
+  const getImgUrl = useCallback((index: number): string => {
+    switch (index) {
+      case 0:
+        return feature01
+      case 1:
+        return feature02
+      case 2:
+        return feature03
+      case 3:
+        return feature04
+      default:
+        return feature01
+    }
+  }, [])
+
   const changeItem = useCallback(
     (index: number) => {
       setCurrentFeature(data[index])
       setCurrentIndex(index)
-      setCurrentImage(data[index].imageUrl)
+      setCurrentImage(getImgUrl(index))
     },
-    [data]
+    [data, getImgUrl]
   )
 
   return (
@@ -69,15 +87,10 @@ const FeatureSectionComponent: FC = () => {
       <div className='featureSection-right'>
         <h1>Our Featured Funds</h1>
         <h3>Nikko AM ARM Disruptive Innovation Fund</h3>
-        <img
-          src={currentImage}
-          alt='shape feature'
-          className='featureImg'
-        />
+        <img src={currentImage} alt='shape feature' className='featureImg' />
         <ul>
           <li>
-            NAV (per 100 shares){' '}
-            <span>{currentFeature?.nav}</span>
+            NAV (per 100 shares) <span>{currentFeature?.nav}</span>
           </li>
           <li>
             Net Assests <span>{currentFeature?.assests}</span>
