@@ -7,6 +7,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "-": "^0.0.1",
+    "@types/node": "^17.0.23",
+    "D": "^1.0.0",
     "gsap": "^3.9.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
