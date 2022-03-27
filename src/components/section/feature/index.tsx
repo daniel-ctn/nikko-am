@@ -46,18 +46,25 @@ const FeatureSectionComponent: FC = () => {
   }, [currentFeature])
 
   const getImgUrl = useCallback((index: number): string => {
+    let imgUrl = ''
     switch (index) {
       case 0:
-        return feature01
+        imgUrl = feature01
+        break
       case 1:
-        return feature02
+        imgUrl = feature02
+        break
       case 2:
-        return feature03
+        imgUrl = feature03
+        break
       case 3:
-        return feature04
+        imgUrl = feature04
+        break
       default:
-        return feature01
+        imgUrl = feature01
     }
+
+    return new URL(imgUrl, import.meta.url).href
   }, [])
 
   const changeItem = useCallback(
