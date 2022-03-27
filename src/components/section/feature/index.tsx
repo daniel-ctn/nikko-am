@@ -43,7 +43,7 @@ const FeatureSectionComponent: FC = () => {
   }, [currentFeature])
 
   const getImgUrl = useCallback((index: number): string => {
-    return new URL(`../../../assests/${data[index].name}.svg`, import.meta.url).href
+    return new URL(`../../../assests/${data[index]?.name}.svg`, import.meta.url).href
   }, [data])
 
   const changeItem = useCallback(
