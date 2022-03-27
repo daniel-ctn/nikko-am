@@ -13,7 +13,7 @@ const TopSectionComponent: FC = () => {
   const ref = useRef(null)
 
   useEffect(() => {
-    const element = ref.current
+    const element = ref.current || document
 
     gsap.to('.shape-svg', {
       y: innerHeight + 200,
