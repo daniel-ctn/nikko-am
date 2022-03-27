@@ -1,8 +1,9 @@
 import { FC, useCallback, useEffect, useState } from 'react'
+import gsap from 'gsap'
 
 import AnchorTag from 'components/ui/AnchorTag'
 
-import MOCK_DATA from 'data/index.json' // mock data
+import MOCK_DATA from 'data/index.json'
 import './featureSection.css'
 
 interface DataType {
@@ -19,15 +20,33 @@ const FeatureSectionComponent: FC = () => {
   const [currentFeature, setCurrentFeature] = useState<DataType>({} as DataType)
   const [currentIndex, setCurrentIndex] = useState<number>(0)
 
+  // set mock data
   useEffect(() => {
     setData(MOCK_DATA.data)
     setCurrentFeature(MOCK_DATA.data[0])
   }, [])
 
-  const changeItem = useCallback((index: number) => {
-    setCurrentFeature(data[index])
-    setCurrentIndex(index)
-  }, [data])
+  // animate
+  useEffect(() => {
+    gsap.set('.featureImg', {
+      transformOrigin: '0% 50%',
+    })
+    gsap.fromTo(
+      '.featureImg',
+      {
+        scaleX: 0.2,
+      },
+      { scaleX: 1 }
+    )
+  }, [currentFeature])
+
+  const changeItem = useCallback(
+    (index: number) => {
+      setCurrentFeature(data[index])
+      setCurrentIndex(index)
+    },
+    [data]
+  )
 
   return (
     <div className='featureSection-container'>
@@ -47,10 +66,15 @@ const FeatureSectionComponent: FC = () => {
       <div className='featureSection-right'>
         <h1>Our Featured Funds</h1>
         <h3>Nikko AM ARM Disruptive Innovation Fund</h3>
-        <img src={currentFeature?.imageUrl} alt='shape feature' />
+        <img
+          src={currentFeature?.imageUrl}
+          alt='shape feature'
+          className='featureImg'
+        />
         <ul>
           <li>
-            NAV (per 100 shares) <span>{currentFeature?.nav}</span>
+            NAV (per 100 shares){' '}
+            <span>{currentFeature?.nav}</span>
           </li>
           <li>
             Net Assests <span>{currentFeature?.assests}</span>
