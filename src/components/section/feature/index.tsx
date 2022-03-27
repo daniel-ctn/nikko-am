@@ -8,6 +8,7 @@ import './featureSection.css'
 
 interface DataType {
   id: string
+  name: string
   nav: string
   assests: string
   dayChange: string
@@ -42,9 +43,8 @@ const FeatureSectionComponent: FC = () => {
   }, [currentFeature])
 
   const getImgUrl = useCallback((index: number): string => {
-    const name = 'feature01'
-    return new URL(`../../../assests/${name}.svg`, import.meta.url).href
-  }, [])
+    return new URL(`../../../assests/${data[index].name}.svg`, import.meta.url).href
+  }, [data])
 
   const changeItem = useCallback(
     (index: number) => {
