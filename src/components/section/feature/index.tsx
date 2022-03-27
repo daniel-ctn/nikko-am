@@ -4,10 +4,6 @@ import gsap from 'gsap'
 import AnchorTag from 'components/ui/AnchorTag'
 
 import MOCK_DATA from 'data'
-import feature01 from 'assests/feature01.svg'
-import feature02 from 'assests/feature02.svg'
-import feature03 from 'assests/feature03.svg'
-import feature04 from 'assests/feature04.svg'
 import './featureSection.css'
 
 interface DataType {
@@ -46,25 +42,8 @@ const FeatureSectionComponent: FC = () => {
   }, [currentFeature])
 
   const getImgUrl = useCallback((index: number): string => {
-    let imgUrl = ''
-    switch (index) {
-      case 0:
-        imgUrl = feature01
-        break
-      case 1:
-        imgUrl = feature02
-        break
-      case 2:
-        imgUrl = feature03
-        break
-      case 3:
-        imgUrl = feature04
-        break
-      default:
-        imgUrl = feature01
-    }
-
-    return new URL(imgUrl, import.meta.url).href
+    const name = 'feature01'
+    return new URL(`../../../assests/${name}.svg`, import.meta.url).href
   }, [])
 
   const changeItem = useCallback(
