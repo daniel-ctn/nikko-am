@@ -9,7 +9,7 @@ const MidSectionComponent: FC = () => {
   return (
     <div className='midSection-container'>
       <div className='midSection-left'>
-        <img src={shapeImage} alt='' />
+        <img src={shapeImage} alt='Shape SVG' />
       </div>
       <div className='midSection-right'>
         <h4>Team of unique combination</h4>
