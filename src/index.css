@@ -17,14 +17,3 @@ html, body {
   scroll-behavior: smooth;
   font-family: 'Roboto', sans-serif;
 }
-
-a {
-  text-decoration: none;
-  color: var(--teal--);
-  font-size: 1.1rem;
-  font-weight: 500;
-}
-
-a:hover {
-  text-decoration: underline var(--teal--);
-}

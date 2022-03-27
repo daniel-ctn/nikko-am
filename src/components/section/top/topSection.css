@@ -37,12 +37,3 @@
     line-height: 1.6;
     margin-bottom: 0.5rem;
 }
-
-.topSection-right__info a {
-    display: inline-flex;
-    align-items: center;
-}
-
-.topSection-right__info svg {
-    margin-left: 0.3rem;
-}

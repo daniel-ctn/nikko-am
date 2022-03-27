@@ -1,8 +1,9 @@
 import { FC } from 'react'
 
+import AnchorTag from 'components/ui/AnchorTag'
+
 import shapeImage from 'images/section2_shape.svg'
 import './midSection.css'
-import RightArrowIcon from "../../icon/RightArrowIcon";
 
 const MidSectionComponent: FC = () => {
   return (
@@ -21,9 +22,7 @@ const MidSectionComponent: FC = () => {
             sophisticated and diverse solutions that set new standards in the
             asset management industry.
           </h5>
-          <a href='https://www.google.com' target='_blank'>
-            Learn more about what makes us unique <RightArrowIcon />
-          </a>
+          <AnchorTag text="Learn more about what makes us unique" color="white"/>
         </div>
       </div>
     </div>
