@@ -1,0 +1,48 @@
+.topSection-container {
+    display: flex;
+    height: 100vh;
+}
+
+.topSection-left {
+    flex-basis: 40%;
+}
+
+.topSection-left img {
+    width: 90%;
+    transform: translateX(-2rem);
+    z-index: -1;
+}
+
+.topSection-right {
+    flex-basis: 60%;
+    padding: 18% 3rem 1rem;
+}
+
+.topSection-right h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.topSection-right__info {
+    height: 40%;
+    margin-top: 2rem;
+    padding-left: 2rem;
+    border-left: 1px solid #999;
+}
+
+.topSection-right__info h3 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.topSection-right__info a {
+    display: inline-flex;
+    align-items: center;
+}
+
+.topSection-right__info svg {
+    margin-left: 0.3rem;
+}
