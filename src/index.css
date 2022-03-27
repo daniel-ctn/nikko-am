@@ -1,4 +1,5 @@
 :root {
+  --white--: #FAFAFA;
   --teal--: #00A4B8;
   --yellow--: #FFD74A;
 }
@@ -19,4 +20,11 @@ html, body {
 
 a {
   text-decoration: none;
+  color: var(--teal--);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline var(--teal--);
 }

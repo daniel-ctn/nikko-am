@@ -1,0 +1,47 @@
+.midSection-container {
+    height: 90vh;
+    background-color: var(--teal--);
+    display: flex;
+}
+
+.midSection-left {
+    flex-basis: 40%;
+    padding-top: 10rem;
+    padding-left: 6rem;
+}
+
+.midSection-left img {
+    width: 75%;
+}
+
+.midSection-right {
+    flex-basis: 60%;
+    padding-top: 10rem;
+    color: var(--white--);
+}
+
+.midSection-right h4 {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+.midSection-right h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 1.5rem 0 4rem;
+}
+
+.midSection-right__info {
+    max-width: 80%;
+    height: 40%;
+    padding-left: 2rem;
+    border-left: 1px solid var(--white--);
+}
+
+.midSection-right__info h5 {
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.5;
+}

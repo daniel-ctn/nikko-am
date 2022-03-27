@@ -1,5 +1,5 @@
-import Layout from 'components/layout'
 import HomePage from 'pages/HomePage'
+import Layout from 'components/layout'
 
 function App() {
   return (

@@ -1,7 +1,15 @@
-import { FC, ReactElement } from 'react'
+import { FC } from 'react'
 
-const HomePage: FC = ({}): ReactElement => {
-  return <div>Home</div>
+import TopSectionComponent from 'components/section/top'
+import MidSectionComponent from 'components/section/middle'
+
+const HomePage: FC = () => {
+  return (
+    <>
+      <TopSectionComponent />
+      <MidSectionComponent />
+    </>
+  )
 }
 
 export default HomePage
