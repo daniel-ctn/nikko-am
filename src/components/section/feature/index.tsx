@@ -25,7 +25,7 @@ const FeatureSectionComponent: FC = () => {
   useEffect(() => {
     setData(MOCK_DATA.data)
     setCurrentFeature(MOCK_DATA.data[0])
-    setCurrentImage(getImgUrl(0))
+    setCurrentImage(`src/assests/${MOCK_DATA.data[0]?.name}.svg`)
   }, [])
 
   // animate
@@ -42,17 +42,13 @@ const FeatureSectionComponent: FC = () => {
     )
   }, [currentFeature])
 
-  const getImgUrl = useCallback((index: number): string => {
-    return new URL(`../../../assests/${data[index]?.name}.svg`, import.meta.url).href
-  }, [data])
-
   const changeItem = useCallback(
     (index: number) => {
       setCurrentFeature(data[index])
       setCurrentIndex(index)
-      setCurrentImage(getImgUrl(index))
+      setCurrentImage(`src/assests/${data[index]?.name}.svg`)
     },
-    [data, getImgUrl]
+    [data]
   )
 
   return (
